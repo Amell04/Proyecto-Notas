@@ -1,0 +1,45 @@
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-2" >
+       
+      </div>
+    <div class="col-md-9">
+        <div class="card">
+            <div class="card-body">
+            <h2  class="text-center" style="font-family: 'Acme', sans-serif;">Lista de Notas</h2>
+            <table class="table table-sm table-hover">
+            <tbody>
+              <tr *ngFor="let nota of notaslist">
+                <td>{{nota.titulo}}</td>
+                <td>{{nota.texto}}</td>
+                <td>{{nota.hora}}</td>
+                <td>{{nota.fecha}}</td>
+                <td>
+                  <a class="btn btn-success text-white"(click)="onEdit(nota)">
+                     
+                    <i class="far fa-edit"></i>
+                   </a>
+                   <a class="btn btn-danger text-white"(click)="onDelete(nota.$key)">
+                     <i class="fas fa-trash-alt"></i>
+                   </a> 
+                </td>
+              </tr>
+            </tbody>
+            </table>
+            </div>
+            </div>
+      </div>
+    </div>
+  </div>
+      <br>
+  <div class="container">
+      <div class="row">
+         
+        <div class="col-md-7" >
+            <app-nota></app-nota>
+          </div>
+        </div>
+      </div>
+
+
